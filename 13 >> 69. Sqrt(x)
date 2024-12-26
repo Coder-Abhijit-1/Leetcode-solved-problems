@@ -1,0 +1,15 @@
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        ll,ul = 0,x
+        result = 0
+
+        while(ll <= ul):
+            mid = ll+(ul-ll) // 2
+            if mid ** 2 > x:
+                ul = mid - 1
+            elif mid ** 2 < x:
+                ll = mid + 1
+                result = mid
+            else :
+                return mid
+        return result
