@@ -1,0 +1,12 @@
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        f,l = 1,1
+        c = f + l
+        for i in range(n-1):
+            c = f + l
+            f = l
+            l = c
+        return l
+
+
+            
